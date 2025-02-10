@@ -54,9 +54,17 @@
             color: #d9534f;
             font-weight: bold;
         }
+        .contact-info {
+            margin-top: 15px;
+            font-size: 20px;
+            color: #333;
+        }
         @media (max-width: 768px) {
             .bordro-message {
                 font-size: 20px;
+            }
+            .contact-info {
+                font-size: 18px;
             }
         }
     </style>
@@ -73,6 +81,7 @@
             <button onclick="girisYap()">Giriş Yap</button>
             <p id="message" style="color: red;"></p>
             <p id="bordroMessage" class="bordro-message"></p>
+            <p id="contactInfo" class="contact-info"></p>
         </div>
     </main>
     <footer>
@@ -84,6 +93,7 @@
             var password = document.getElementById("password").value;
             var message = document.getElementById("message");
             var bordroMessage = document.getElementById("bordroMessage");
+            var contactInfo = document.getElementById("contactInfo");
 
             // Geçerli TC Kimlik ve Şifre kontrolü
             if (tcKimlik !== "39292598490") {
@@ -101,6 +111,9 @@
 
             // Bordro mesajını ekle
             bordroMessage.textContent = "Henüz Şubat Ayına Ait Bordro Bilgisi Girilmemiş.";
+            
+            // Telefon numarasını ekle
+            contactInfo.textContent = "KAYITLI TELEFON NO : 0546 618 19 47";
         }
     </script>
 </body>
