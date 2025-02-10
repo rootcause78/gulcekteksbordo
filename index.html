@@ -54,7 +54,7 @@
             color: #d9534f;
             font-weight: bold;
         }
-        .contact-info {
+        .contact-info, .employee-name {
             margin-top: 15px;
             font-size: 20px;
             color: #333;
@@ -63,7 +63,7 @@
             .bordro-message {
                 font-size: 20px;
             }
-            .contact-info {
+            .contact-info, .employee-name {
                 font-size: 18px;
             }
         }
@@ -82,6 +82,7 @@
             <p id="message" style="color: red;"></p>
             <p id="bordroMessage" class="bordro-message"></p>
             <p id="contactInfo" class="contact-info"></p>
+            <p id="employeeName" class="employee-name"></p>
         </div>
     </main>
     <footer>
@@ -94,6 +95,7 @@
             var message = document.getElementById("message");
             var bordroMessage = document.getElementById("bordroMessage");
             var contactInfo = document.getElementById("contactInfo");
+            var employeeName = document.getElementById("employeeName");
 
             // Geçerli TC Kimlik ve Şifre kontrolü
             if (tcKimlik !== "39292598490") {
@@ -114,6 +116,9 @@
             
             // Telefon numarasını ekle
             contactInfo.textContent = "KAYITLI TELEFON NO : 0546 618 19 47";
+
+            // Çalışan ismi ekle
+            employeeName.textContent = "ÇALIŞAN İSİM SOY İSİM: ATAKAN YILDIRIM";
         }
     </script>
 </body>
