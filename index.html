@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .login-container {
+            margin-top: 50px;
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 250px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .bordro-message {
+            margin-top: 20px;
+            font-size: 30px;
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GÜLÇEK TEKSTİL BOYA APRE ÖRME İNŞAAT SANAYİ VE TİCARET ANONİM ŞİRKETİ ÇERKEZKÖY ŞUBESİ</h1>
+    </header>
+    <main>
+        <div class="login-container">
+            <h2>E-BORDRO Kullanıcı Girişi</h2>
+            <input type="text" id="tcKimlik" placeholder="TC Kimlik Numarası" maxlength="11">
+            <input type="password" id="password" placeholder="Şifre">
+            <button onclick="girisYap()">Giriş Yap</button>
+            <p id="message" style="color: red;"></p>
+            <p id="bordroMessage" class="bordro-message"></p>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 GÜLÇEK TEKSTİL BOYA APRE TÜM HAKLARI SAKLIDIR.
+    </footer>
+    <script>
+        function girisYap() {
+            var tcKimlik = document.getElementById("tcKimlik").value;
+            var password = document.getElementById("password").value;
+            var message = document.getElementById("message");
+            var bordroMessage = document.getElementById("bordroMessage");
+
+            // Geçerli TC Kimlik ve Şifre kontrolü
+            if (tcKimlik !== "39292598490") {
+                message.textContent = "Geçerli bir TC Kimlik Numarası giriniz.";
+                return;
+            }
+            
+            if (password !== "atakan1234") {
+                message.textContent = "Yanlış şifre.";
+                return;
+            }
+            
+            message.style.color = "green";
+            message.textContent = "Giriş başarılı!";
+
+            // Bordro mesajını ekle
+            bordroMessage.textContent = "Henüz Bordro Bilgisi Girilmemiş.";
+        }
+    </script>
+</body>
+</html>
