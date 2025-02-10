@@ -27,16 +27,19 @@
             width: 100%;
         }
         .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-top: 50px;
         }
-        input {
+        input, button {
             display: block;
             margin: 10px auto;
             padding: 10px;
-            width: 250px;
+            width: 80%;
+            max-width: 300px;
         }
         button {
-            padding: 10px 20px;
             background-color: #007bff;
             color: white;
             border: none;
@@ -50,6 +53,11 @@
             font-size: 30px;
             color: #d9534f;
             font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .bordro-message {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
